@@ -1,6 +1,6 @@
 FROM archlinux/base
 
-LABEL maintainer="self@2m.lt"
+LABEL maintainer="jk@vin.ovh"
 
 RUN pacman -Syu --needed --noconfirm sudo namcap fakeroot audit grep diffutils
 
