@@ -2,10 +2,13 @@ FROM archlinux/base
 
 LABEL maintainer="jk@vin.ovh"
 
-RUN pacman -Syu --needed --noconfirm sudo namcap fakeroot audit grep diffutils
+ADD https://raw.githubusercontent.com/jstkdng/archlinux-docker/master/pacman_setup.sh /tmp/pacman_setup.sh
+
+RUN bash /tmp/pacman_setup.sh
+#RUN pacman -Syu --needed --noconfirm sudo namcap fakeroot audit grep diffutils
 
 # dependencies for yay
-RUN pacman -S --noconfirm git base-devel
+#RUN pacman -S --noconfirm git base-devel
 
 RUN useradd --create-home build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
