@@ -12,4 +12,4 @@ RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # build yay
 ADD https://raw.githubusercontent.com/jstkdng/archlinux-docker/master/build_yay.sh /tmp/build_yay.sh
-RUN sudo -u build -H bash -c /tmp/build_yay.sh
+RUN sudo -u build -H bash /tmp/build_yay.sh

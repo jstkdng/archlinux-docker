@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cd /home/build
 
 git clone https://aur.archlinux.org/yay.git
