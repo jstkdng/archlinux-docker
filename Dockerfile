@@ -9,5 +9,5 @@ RUN bash /tmp/pacman_setup.sh
 RUN useradd --create-home build
 RUN echo "build ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-#COPY build_yay.sh /tmp/build_yay.sh
-#RUN sudo -u build -H bash -c /tmp/build_yay.sh
+COPY https://raw.githubusercontent.com/jstkdng/archlinux-docker/master/build_yay.sh /tmp/build_yay.sh
+RUN sudo -u build -H bash -c /tmp/build_yay.sh
