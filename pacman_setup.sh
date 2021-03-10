@@ -6,4 +6,4 @@ bsdtar -C / -xvf $patched_glibc
 rm $patched_glibc
 
 pacman -Syu --noconfirm git
-pacman -Scc
+pacman -Scc --noconfirm
